@@ -1,10 +1,12 @@
-const vendas = require('./services/services')
-vendas.default();
+import Vendas from "./components/vendas";
+
+
+
 
 function App() {
   return (
     <div className="App">   
-        
+        <Vendas/>
     </div>
   );
 }
