@@ -1,16 +1,14 @@
-import * as vendas from '../services/getVendas'
-
-//const GetAllVendas = require('../services/getVendas')
-
-const dados = vendas.vendas();
-
-console.log(dados)
+import * as getVendas from '../services/getVendas'
 
 
-function VendasList(){  
+function VendasList(){
+  const vendas = getVendas.getVendas();
+  
   return (      
       <div>
-        <p></p>
+        {vendas?.map(venda => (
+          <p key={venda.id}>{venda.data}{venda.abc}</p>
+        ))}
       </div>     
    )
 }
