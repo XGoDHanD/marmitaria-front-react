@@ -1,12 +1,10 @@
-import Vendas from "./components/vendas";
-
-
+import Vendas from "./components/Vendas"
 
 
 function App() {
   return (
     <div className="App">   
-        <Vendas/>
+        <Vendas />
     </div>
   );
 }
