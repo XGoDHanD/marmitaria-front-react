@@ -1,27 +1,32 @@
 
-//const axios = require('axios').default;
-//const url = 'http://localhost:3001/vendas';
+import axios from 'axios';
+const url = 'http://localhost:3001/vendas';
 
 
 
 
-   //function getAllVendas (){   
-   //    axios.get(url)
-   //    .then(Response =>{
-   //        const dataVendas = Response.data;
-   //        console.log(dataVendas)
-   //    }) 
-
-   //    //return dataVendas;
-   //}
+export function vendas (){   
+                const dataVenda =  axios.get(url)
+                .then((response) => {
+                       const dados = response.data;
+                       console.log(dados)
+                       return dados;
+                }).catch((error) => {
+                        console.log(error)
+                })         
+                console.log(dataVenda);
+                return dataVenda;    
+        
+        
+}
 
    
 
-export function vendas (){  
-        const dados = "555"
-        return dados  
-
-}   
+//export function vendas (){  
+//        const dados = [{id: 1, nome: 'paulo', idade: 40, nacionalidade: 'fortaleza'}, {id: 2, nome: 'paulo', idade: 40, nacionalidade: 'fortaleza'}]
+//        return dados  
+//
+//}   
 
 
 

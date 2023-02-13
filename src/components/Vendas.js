@@ -1,16 +1,27 @@
 import * as vendas from '../services/getVendas'
 
-//const GetAllVendas = require('../services/getVendas')
+//const dados = await vendas.vendas().then((res) => {
+//  const retornoDados = res.data;
+//  return retornoDados;
+//});
+//
+//console.log(dados)
+
 
 const dados = vendas.vendas();
 
-console.log(dados)
+
+//console.log(dados)
+
+//const dados = vendas.vendas();
 
 
 function VendasList(){  
   return (      
       <div>
-        <p></p>
+        {dados.map((dado) => {
+          return <p key={dado.id}>{dado.nome}, {dado.idade}, {dado.nacionalidade}</p>
+        })}
       </div>     
    )
 }
