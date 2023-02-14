@@ -8,13 +8,11 @@ const url = 'http://localhost:3001/vendas';
 export function vendas (){   
                 const dataVenda =  axios.get(url)
                 .then((response) => {
-                       const dados = response.data;
-                       console.log(dados)
-                       return dados;
+                        const dados = response.data;
+                        return dados;
                 }).catch((error) => {
                         console.log(error)
                 })         
-                console.log(dataVenda);
                 return dataVenda;    
         
         

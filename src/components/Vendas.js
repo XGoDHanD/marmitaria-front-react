@@ -7,11 +7,22 @@ import * as vendas from '../services/getVendas'
 //
 //console.log(dados)
 
+var dado;
 
-const dados = vendas.vendas();
+const dados = vendas.vendas()
+.then((response) => {
+  dado = response;  
+
+}).then(() => {
+  return dado;
+})
+  
+const a = dados.then((res) => {
+  return res;
+})
 
 
-//console.log(dados)
+console.log(a)
 
 //const dados = vendas.vendas();
 
